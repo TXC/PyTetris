@@ -1,0 +1,30 @@
+[build-system]
+requires        = ["setuptools>=61.0.0", "wheel"]
+build-backend   = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pytetris_core*"]
+
+[tool.setuptools.package-data]
+pytetris_core = ["py.typed"]
+
+
+[project]
+name = "pytetris-core"
+version = "0.1.0"
+authors = [
+    { name = "Jonas Marklén", email = "txc@txc.se" },
+]
+license = "WTFPL"
+description = "Core game logic for PyTetris"
+readme = "README.rst"
+requires-python = ">=3.14"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = []

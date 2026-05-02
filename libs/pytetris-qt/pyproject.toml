@@ -1,0 +1,33 @@
+[build-system]
+requires        = ["setuptools>=61.0.0", "wheel"]
+build-backend   = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pytetris_qt*"]
+
+[tool.setuptools.package-data]
+pytetris_qt = ["py.typed"]
+
+
+[project]
+name = "pytetris-qt"
+version = "0.1.0"
+authors = [
+    { name = "Jonas Marklén", email = "txc@txc.se" },
+]
+license = "WTFPL"
+description = "Shared PyQt6 utilities for PyTetris applications"
+readme = "README.rst"
+requires-python = ">=3.14"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "PyQt6>=6.0",
+    "pytetris-core",
+]
