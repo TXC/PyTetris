@@ -37,6 +37,17 @@
   },
   "packageRules": [
     {
+      "description": "Other: Collapse non-major dependency updates into one rolling PR",
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "groupName": "Other dependencies",
+      "groupSlug": "other-dependencies"
+    },
+    {
       "description": "JavaScript: Collapse non-major dependency updates into one rolling PR.",
       "matchCategories": ["js"],
       "matchUpdateTypes": [
@@ -112,17 +123,6 @@
       ],
       "groupName": "Go dependencies",
       "groupSlug": "go-dependencies"
-    },
-    {
-      "description": "Other: Collapse non-major dependency updates into one rolling PR",
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
-      "groupName": "Other dependencies",
-      "groupSlug": "other-dependencies"
     },
     {
       "description": "Collapse all GitHub Actions bumps into a single PR and pin them to commit SHAs.",
